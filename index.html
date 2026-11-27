@@ -1,200 +1,487 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ASHRAFUL ALAM - PROFESSIONAL CV
-% Twenty Seconds CV Template
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashraful Alam | Excavator Operator CV</title>
 
-\documentclass[letterpaper]{twentysecondcv}
-
-\usepackage{graphicx}
-\usepackage{array}
-\usepackage{ifthen}
-
-%-----------------------------------------------
-% MACHINE PHOTO SYSTEM
-%-----------------------------------------------
-
-\newcommand{\machineitem}[2]{%
-\begin{minipage}[c]{0.31\linewidth}
-\centering
-\IfFileExists{images/#2}
-{\includegraphics[height=1.05cm,width=2.1cm,keepaspectratio]{images/#2}}
-{\fbox{\parbox[c][0.8cm][c]{1.8cm}{\centering\scriptsize Upload Photo}}}
-\\[-1mm]
-{\small\textbf{#1}}
-\end{minipage}
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-%-----------------------------------------------
-% PERSONAL INFORMATION
-%-----------------------------------------------
-
-\profilepic{WA0004.jpg}
-
-\cvname{Ashraful Alam}
-\cvjobtitle{Professional Excavator Operator}
-
-\cvdate{02 February 1993}
-
-\cvaddress{
-Jatrapur, Ashuganj,\\
-Brahmanbaria, Bangladesh
+body {
+    background: #e8edf2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263747;
+    padding: 30px 12px;
 }
 
-\cvnumberphone{+880 1307799840}
-
-\cvsite{}
-\cvgithub{}
-
-\cvmail{mhashrafulalam106@gmail.com}
-
-%-----------------------------------------------
-% DOCUMENT
-%-----------------------------------------------
-
-\begin{document}
-
-%-----------------------------------------------
-% ABOUT ME
-%-----------------------------------------------
-
-\aboutme{
-Dedicated and experienced Excavator Operator
-with over 8 years of experience in construction
-and civil engineering projects. Skilled in operating
-heavy machinery, excavation, earthmoving, site
-preparation and equipment maintenance. Able to
-work effectively in a team, follow safety procedures
-and complete assigned tasks efficiently.
+.cv {
+    max-width: 950px;
+    min-height: 1120px;
+    margin: auto;
+    background: white;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    box-shadow: 0 5px 30px rgba(0,0,0,.14);
 }
 
-%-----------------------------------------------
-% SKILLS
-%-----------------------------------------------
+/* LEFT SIDEBAR */
 
-\skills{
-{Excavator Operation/6},
-{JCB Operation/4.5},
-{Dozer Operation/4},
-{Roller Operation/4},
-{Equipment Maintenance/4},
-{Teamwork/4.5},
-{Leadership/4},
-{Communication/4},
-{Problem Solving/4}
+.sidebar {
+    background: #102c46;
+    color: white;
+    padding: 35px 25px;
 }
 
-%-----------------------------------------------
-
-\makeprofile
-
-%-----------------------------------------------
-% MACHINES
-%-----------------------------------------------
-
-\section{Machines I Can Operate}
-
-\begin{center}
-
-\machineitem{Excavator}{excavator.png}
-\hfill
-\machineitem{JCB}{jcb.png}
-\hfill
-\machineitem{Dozer}{dozer.png}
-
-\vspace{0.35cm}
-
-\machineitem{Roller}{roller.png}
-\hfill
-\machineitem{Wheel Loader}{loader.png}
-\hfill
-\machineitem{Grader}{grader.png}
-
-\vspace{0.35cm}
-
-\machineitem{Forklift}{forklift.png}
-
-\end{center}
-
-%-----------------------------------------------
-% PROFESSIONAL EXPERIENCE
-%-----------------------------------------------
-
-\section{Professional Experience}
-
-\begin{twenty}
-
-\twentyitem
-{2021-2025}
-{Excavator Operator}
-{Abdullah Salman Moaidh Al Otaib Company}
-{
-Operated excavators on construction and civil
-engineering projects. Performed excavation,
-earthmoving and site preparation while following
-safety procedures and supervisor instructions.
+.profile {
+    width: 155px;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 22px;
+    border: 4px solid #fff;
+    border-radius: 5px;
 }
 
-\twentyitem
-{2019-2021}
-{Excavator Operator}
-{Adani Group Pvt. Ltd.}
-{
-Operated heavy machinery and carried out
-excavation, earthmoving and construction
-activities. Maintained efficient machine operation
-and completed assigned work on time.
+.name {
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .5px;
 }
 
-\twentyitem
-{2017-2019}
-{Excavator Operator}
-{Best Construct Company Ltd.}
-{
-Performed excavation and construction work.
-Assisted with site preparation, ground levelling
-and other assigned operational duties.
+.job {
+    text-align: center;
+    color: #e6b95d;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+    line-height: 1.5;
 }
 
-\end{twenty}
+.side-title {
+    font-size: 17px;
+    border-bottom: 2px solid #e6b95d;
+    padding-bottom: 8px;
+    margin: 32px 0 16px;
+    text-transform: uppercase;
+}
 
-%-----------------------------------------------
-% EDUCATION
-%-----------------------------------------------
+.contact p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
 
-\section{Education}
+.contact strong {
+    color: #e6b95d;
+    display: block;
+}
 
-\begin{twenty}
+.about {
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: justify;
+}
 
-\twentyitem
-{}
-{Class 9}
-{General Education}
-{Completed education up to Class 9.}
+/* SKILLS */
 
-\end{twenty}
+.skill {
+    margin-bottom: 15px;
+}
 
-%-----------------------------------------------
-% LICENCE
-%-----------------------------------------------
+.skill-name {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
 
-\section{Driving Licence}
+.bar {
+    height: 6px;
+    background: #40576b;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-\begin{itemize}
-\item Driving licences from two countries.
-\end{itemize}
+.fill {
+    height: 100%;
+    background: #e6b95d;
+    border-radius: 10px;
+}
 
-%-----------------------------------------------
-% LANGUAGES
-%-----------------------------------------------
+/* RIGHT CONTENT */
 
-\section{Languages}
+.main {
+    padding: 40px 35px;
+}
 
-\begin{itemize}
-\item Bengali - Native
-\item English - Basic (confirm level)
-\end{itemize}
+.section {
+    margin-bottom: 32px;
+}
 
-%-----------------------------------------------
+.section-title {
+    font-size: 20px;
+    color: #102c46;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e6b95d;
+    padding-bottom: 10px;
+    margin-bottom: 23px;
+}
 
-\end{document}
+.experience {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid #d9ad53;
+    margin-left: 5px;
+    padding-bottom: 25px;
+}
+
+.experience::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #d9ad53;
+    border-radius: 50%;
+    left: -6.5px;
+    top: 3px;
+}
+
+.year {
+    color: #bd8c32;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.position {
+    font-size: 16px;
+    font-weight: bold;
+    color: #102c46;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-size: 13px;
+    font-weight: bold;
+    color: #526577;
+    margin-bottom: 9px;
+}
+
+.description {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #53616d;
+    text-align: justify;
+}
+
+/* MACHINE GALLERY */
+
+.machines {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.machine {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border: 1px solid #e1e6eb;
+    border-radius: 5px;
+    min-height: 70px;
+}
+
+.machine img {
+    width: 76px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.machine span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #102c46;
+}
+
+.simple-list {
+    padding-left: 18px;
+    font-size: 12px;
+    line-height: 2;
+    color: #53616d;
+}
+
+/* BUTTONS */
+
+.actions {
+    max-width: 950px;
+    margin: 18px auto;
+    text-align: center;
+}
+
+.actions button {
+    background: #102c46;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.actions button:hover {
+    background: #bd8c32;
+}
+
+/* MOBILE */
+
+@media(max-width:650px) {
+    body { padding: 10px 5px; }
+
+    .cv {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 28px 22px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    .machines {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PDF / PRINT */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .cv {
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+        min-height: 297mm;
+        grid-template-columns: 29% 71%;
+    }
+
+    .sidebar {
+        min-height: 297mm;
+    }
+
+    .main {
+        padding: 30px 25px;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .section, .experience {
+        break-inside: avoid;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="cv">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<img class="profile"
+src="images/WA0004.jpg"
+alt="Ashraful Alam Profile Photo"
+onerror="this.src='https://placehold.co/300x350/102c46/ffffff?text=Your+Photo'">
+
+<div class="name">Ashraful Alam</div>
+
+<div class="job">PROFESSIONAL EXCAVATOR OPERATOR</div>
+
+<div class="side-title">Contact</div>
+
+<div class="contact">
+<p><strong>PHONE</strong>+880 1307799840</p>
+<p><strong>EMAIL</strong>mhashrafulalam106@gmail.com</p>
+<p><strong>ADDRESS</strong>Jatrapur, Ashuganj, Brahmanbaria, Bangladesh</p>
+<p><strong>DATE OF BIRTH</strong>02 February 1993</p>
+</div>
+
+<div class="side-title">About Me</div>
+
+<div class="about">
+Dedicated and experienced Excavator Operator with over 8 years of experience in construction and civil engineering projects. Skilled in heavy machinery operation, excavation, earthmoving, site preparation and equipment maintenance. Committed to workplace safety and completing projects efficiently.
+</div>
+
+<div class="side-title">Professional Skills</div>
+
+<div class="skill">
+<div class="skill-name">Excavator Operation</div>
+<div class="bar"><div class="fill" style="width:100%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">JCB Operation</div>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Dozer Operation</div>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Roller Operation</div>
+<div class="bar"><div class="fill" style="width:65%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Equipment Maintenance</div>
+<div class="bar"><div class="fill" style="width:65%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Teamwork</div>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="main">
+
+<div class="section">
+
+<div class="section-title">Machines I Can Operate</div>
+
+<div class="machines">
+
+<div class="machine">
+<img src="images/excavator.png"
+alt="Excavator"
+onerror="this.style.display='none'">
+<span>Excavator</span>
+</div>
+
+<div class="machine">
+<img src="images/jcb.png"
+alt="JCB"
+onerror="this.style.display='none'">
+<span>JCB</span>
+</div>
+
+<div class="machine">
+<img src="images/dozer.png"
+alt="Dozer"
+onerror="this.style.display='none'">
+<span>Dozer</span>
+</div>
+
+<div class="machine">
+<img src="images/roller.png"
+alt="Roller"
+onerror="this.style.display='none'">
+<span>Roller</span>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+
+<div class="section-title">Professional Experience</div>
+
+<div class="experience">
+<div class="year">2021 – 2025</div>
+<div class="position">Excavator Operator</div>
+<div class="company">Abdullah Salman Moaidh Al Otaib Company</div>
+<div class="description">
+Operated excavators on various construction and civil engineering projects. Performed excavation, earthmoving and site preparation while following workplace safety procedures and supervisor instructions.
+</div>
+</div>
+
+<div class="experience">
+<div class="year">2019 – 2021</div>
+<div class="position">Excavator Operator</div>
+<div class="company">Adani Group Pvt. Ltd.</div>
+<div class="description">
+Operated heavy machinery and performed excavation, earthmoving and construction activities. Maintained efficient machine operation and completed assigned work on time.
+</div>
+</div>
+
+<div class="experience">
+<div class="year">2017 – 2019</div>
+<div class="position">Excavator Operator</div>
+<div class="company">Best Construct Company Ltd.</div>
+<div class="description">
+Performed excavation and construction work, including site preparation and ground levelling. Ensured efficient machine operation and timely completion of assigned tasks.
+</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Education</div>
+
+<div class="position">Class 9</div>
+<div class="description">General Education</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Driving Licence</div>
+
+<ul class="simple-list">
+<li>Driving licences from two countries</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Languages</div>
+
+<ul class="simple-list">
+<li>Bengali – Native</li>
+<li>English – Basic (confirm actual level)</li>
+</ul>
+
+</div>
+
+</main>
+</div>
+
+<div class="actions">
+<button onclick="window.print()">Download / Save CV as PDF</button>
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</button>
+</div>
+
+</body>
+</html>
